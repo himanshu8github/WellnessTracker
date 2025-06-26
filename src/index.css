@@ -1,0 +1,47 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #dfe9f3, #ffffff);
+  min-height: 100vh;
+}
+
+/* MoodTracker Styles */
+.mood-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.mood-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.emoji-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.emoji-btn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.emoji-btn:hover {
+  transform: scale(1.2);
+}
+
+.emoji-btn.active {
+  transform: scale(1.5);
+}
+
+.mood-result {
+  margin-top: 20px;
+  font-size: 18px;
+}
