@@ -1,47 +1,73 @@
-
-
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #dfe9f3, #ffffff);
+  padding-top: 100px; /* height of navbar */
+  background: linear-gradient(to bottom right, #f0f2f5, #e8f0ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
   min-height: 100vh;
 }
 
-/* MoodTracker Styles */
-.mood-container {
-  text-align: center;
-  padding: 30px;
+.main-container {
+  padding: 20px;
 }
 
-.mood-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.emoji-list {
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+}
+
+.dashboard-card {
+  background: linear-gradient(to bottom, #ffffff, #f5f9ff);
+  border-left: 6px solid #4facfe;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.tips-container {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  text-align: center;
+  max-width: 600px;
+  background: #ffffff;
+  border-left: 6px solid #00d4ff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.emoji-btn {
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+.tips-container:hover {
+  transform: translateY(-4px);
 }
 
-.emoji-btn:hover {
-  transform: scale(1.2);
+h2.section-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 16px;
+  border-left: 4px solid #4facfe;
+  padding-left: 10px;
 }
 
-.emoji-btn.active {
-  transform: scale(1.5);
-}
-
-.mood-result {
-  margin-top: 20px;
-  font-size: 18px;
+* {
+  transition: all 0.3s ease;
 }

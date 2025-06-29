@@ -1,12 +1,17 @@
 import React from "react";
-import MoodTracker from "./components/MoodTracker";
+import Navbar from "./components/Navbar";
+import Dashboard from "./pages/Dashboard";
+import "./index.css";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <MoodTracker />
-    </div>
+    <>
+      <Navbar />
+      <div className="main-container">
+        <Dashboard />
+      </div>
+    </>
   );
-};
+}
 
 export default App;
